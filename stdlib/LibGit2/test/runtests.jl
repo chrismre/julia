@@ -2691,6 +2691,7 @@ mktempdir() do dir
                 repo_dir = joinpath(root, "dest")
                 code = """
                     using Serialization
+                    import LibGit2
                     dest_dir = "$repo_dir"
                     open("$errfile", "w+") do f
                         try
